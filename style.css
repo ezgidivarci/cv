@@ -151,3 +151,112 @@ nav .container ul li a:hover {
     color: var(--color-primary);
     background-color: #29f5a6;
 }
+
+
+/* Main */
+
+section.main {
+    display: grid;
+    place-items: center;
+    position: relative;
+    top: 5rem;
+    padding-bottom: 14rem;
+}
+
+section.main .container {
+    display: grid;
+    grid-template-columns: 5rem auto 28rem;
+    /* 5rem auto 28rem*/
+    gap: 2rem;
+}
+
+section.main .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 5rem;
+}
+
+section.main .socials a {
+    font-size: 1.1rem;
+    background: var(--color-light);
+    color: var(--color-dark);
+    padding: 0.3 rem;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+section.main .socials a:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+section.main .info h1 {
+    text-align: left;
+    margin: 0;
+}
+
+section.main .info p {
+    width: 24rem
+}
+
+section.main h3 {
+    margin: 2.4rem 0 1rem;
+}
+
+section.main .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.main .profile .circle {
+    width: 28rem;
+    height: 28rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    position: relative;
+    background-color: #ffce31;
+}
+
+section.main .profile .circle i {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    background: var(--color-white);
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.main .profile .circle i:nth-child(1) {
+    left: calc(50% - 2rem);
+    top: -2rem;
+}
+
+section.main .profile .circle i:nth-child(2) {
+    right: -2rem;
+    top: calc(50% - 2rem);
+}
+
+section.main .profile .circle i:nth-child(3) {
+    left: -2rem;
+    top: calc(50% - 2rem);
+}
+
+section.main .profile .circle i:nth-child(4) {
+    bottom: -2rem;
+    left: calc(50% - 2rem);
+}
+
+section.main .profile .in-circle {
+    display: none;
+}
