@@ -3,9 +3,8 @@
     --color-light: #f4f4f4;
     --color-dark: #525252;
     --color-black: #141415;
-    --color-primary: #f24e1e;
-    --color-succes: #29f5a6;
-    --color-warning: #ffce31;
+    --color-primary: #26cf8e;
+    --color-primary-x: #1b8151;
     --transition: all 300ms ease;
 }
 
@@ -21,7 +20,6 @@
 
 html {
     font-size: 15px;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -90,10 +88,6 @@ img {
     transition: var(--transition);
 }
 
-.btn:hover {
-    box-shadow: 2rem;
-}
-
 .btn-primary {
     background: var(--color-primary);
     color: var(--color-white);
@@ -103,7 +97,6 @@ img {
 /* navbar*/
 
 nav {
-    background: coral;
     width: 100%;
     height: 5rem;
     background: var(--color-white);
@@ -121,10 +114,6 @@ nav .container {
     justify-content: flex-end;
     align-items: center;
     height: 100%;
-}
-
-nav button {
-    display: none;
 }
 
 nav h3 {
@@ -148,7 +137,7 @@ nav .container ul li a {
 }
 
 nav .container ul li a:hover {
-    color: var(--color-primary);
+    color: var(--color-primary-x);
     background-color: #29f5a6;
 }
 
@@ -181,7 +170,7 @@ section.main .socials a {
     font-size: 1.1rem;
     background: var(--color-light);
     color: var(--color-dark);
-    padding: 0.3 rem;
+    padding: 0.3rem;
     border-radius: 50%;
     height: 3rem;
     width: 3rem;
@@ -202,7 +191,7 @@ section.main .info h1 {
 }
 
 section.main .info p {
-    width: 24rem
+    width: 40rem
 }
 
 section.main h3 {
@@ -216,12 +205,18 @@ section.main .profile {
 }
 
 section.main .profile .circle {
-    width: 28rem;
-    height: 28rem;
-    border: 1px solid var(--color-primary);
+    width: 27rem;
+    height: 27rem;
+    border: 1px solid var(--color-primary-x);
     border-radius: 50%;
     position: relative;
-    background-color: #ffce31;
+    animation: move 30s linear infinite;
+}
+
+@keyframes move {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 section.main .profile .circle i {
@@ -231,7 +226,7 @@ section.main .profile .circle i {
     border-radius: 50%;
     position: absolute;
     background: var(--color-white);
-    color: var(--color-primary);
+    color: var(--color-primary-x);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,5 +253,174 @@ section.main .profile .circle i:nth-child(4) {
 }
 
 section.main .profile .in-circle {
-    display: none;
+    position: absolute;
+    width: 21rem;
+    height: 21rem;
+    border-radius: 50%;
+    overflow: hidden;
 }
+
+.bold {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.semi-bold {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.resume {
+    width: 52rem;
+    height: auto;
+    display: flex;
+    margin: 50px auto;
+}
+
+.resume .resume_left {
+    width: 19rem;
+    background: var(--color-light);
+}
+
+.resume .resume_left .resume_profile {
+    width: 100%;
+    height: 280px;
+}
+
+.resume .resume_left .resume_profile img {
+    position: absolute;
+    width: 14em;
+    height: 14rem;
+    overflow: hidden;
+    margin-top: 3rem;
+    margin-left: 2.5rem;
+}
+
+.resume .resume_left .resume_content {
+    padding: 0 25px;
+}
+
+.resume .title {
+    margin-bottom: 20px;
+}
+
+.resume .resume_left .bold {
+    color: var(--color-dark);
+    text-align: center;
+}
+
+.resume .resume_left .regular {
+    color: var(--color-dark);
+    text-align: center;
+}
+
+.resume .resume_left ul li {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.resume .resume_left ul li .data {
+    color: var(--color-dark);
+    margin: 0.4rem;
+}
+
+.resume .resume_left .resume_skills ul li {
+    display: flex;
+    margin-bottom: 10px;
+    color: var(--color-dark);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume .resume_left .resume_skills ul li .skill_name {
+    width: 25%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress {
+    width: 60%;
+    margin: 0 5px;
+    height: 5px;
+    background: var(--color-white);
+    position: relative;
+}
+
+.resume .resume_left .resume_skills ul li .skill_per {
+    width: 15%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--color-primary-x);
+}
+
+.resume .resume_left .resume_social .semi-bold {
+    color: var(--color-primary-x);
+    margin-bottom: 3px;
+}
+
+.resume .resume_right {
+    width: 520px;
+    background: var(--color-white);
+    padding: 25px;
+}
+
+.resume .resume_right .bold {
+    color: var(--color-primary-x);
+}
+
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {
+    padding-left: 40px;
+    overflow: hidden;
+}
+
+.resume .resume_right ul li {
+    position: relative;
+}
+
+.resume .resume_right ul li .date {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.resume .resume_right ul li .info {
+    margin-bottom: 20px;
+}
+
+.resume .resume_right ul li:last-child .info {
+    margin-bottom: 0;
+}
+
+.resume a {
+    color: var(--color-primary-x);
+}
+
+
+/* .resume .resume_right .resume_work ul li:before,
+.resume .resume_right .resume_education ul li:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary-x);
+}
+
+.resume .resume_right .resume_work ul li:after,
+.resume .resume_right .resume_education ul li:after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: -21px;
+    width: 2px;
+    height: 115px;
+    background: var(--color-primary-x);
+} */
